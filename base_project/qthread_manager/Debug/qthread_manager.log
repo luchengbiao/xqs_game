@@ -1,0 +1,38 @@
+﻿Build started 2018/11/5 14:26:46.
+     1>Project "D:\Work\common-project\base_project\qthread_manager\qthread_manager.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /I..\..\..\libs\include\ /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QTHREAD_MANAGER_LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt base_task_thread.cpp base_thread_manager.cpp closure.cpp framework_qthread.cpp qbasethread.cpp qthread_manager.cpp
+         base_task_thread.cpp
+         base_thread_manager.cpp
+         closure.cpp
+         framework_qthread.cpp
+         qbasethread.cpp
+         qthread_manager.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Work\common-project\base_project\Win32\Debug\qthread_manager_d.lib" /LIBPATH:..\..\..\libs\ /NOLOGO Debug\base_task_thread.obj
+         Debug\base_thread_manager.obj
+         Debug\closure.obj
+         Debug\framework_qthread.obj
+         Debug\qbasethread.obj
+         Debug\qthread_manager.obj
+         qthread_manager.vcxproj -> D:\Work\common-project\base_project\Win32\Debug\qthread_manager_d.lib
+       PostBuildEvent:
+         xcopy "D:\Work\common-project\base_project\qthread_manager\*.h" "D:\Work\common-project\base_project\..\..\libs\include\qthread_manager\" /S /E /Y
+         xcopy "D:\Work\common-project\base_project\Win32\Debug\qthread_manager_d.lib" "D:\Work\common-project\base_project\..\..\libs\" /S /E /Y
+         :VCEnd
+         D:\Work\common-project\base_project\qthread_manager\base_task_thread.h
+         D:\Work\common-project\base_project\qthread_manager\base_thread_manager.h
+         D:\Work\common-project\base_project\qthread_manager\closure.h
+         D:\Work\common-project\base_project\qthread_manager\framework_qthread.h
+         D:\Work\common-project\base_project\qthread_manager\qbasethread.h
+         D:\Work\common-project\base_project\qthread_manager\qthread_manager.h
+         D:\Work\common-project\base_project\qthread_manager\qthread_manager_global.h
+         复制了 7 个文件
+         D:\Work\common-project\base_project\Win32\Debug\qthread_manager_d.lib
+         复制了 1 个文件
+     1>Done Building Project "D:\Work\common-project\base_project\qthread_manager\qthread_manager.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.14

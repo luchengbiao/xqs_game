@@ -1,0 +1,175 @@
+﻿Build started 2018/11/8 9:37:24.
+     1>Project "D:\Work\common-project\tool_kits\game\game.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Moc'ing ui_chess_operational_layer.h...
+         Moc'ing ui_chess_path_marker_layer.h...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_ui_chess_operational_layer.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_ui_chess_operational_layer.cpp, GeneratedFiles\Release\moc_ui_chess_operational_layer.cpp.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I.. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtGui /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtWidgets /I..\..\..\libs\include /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D GAME_LIB /D QT_GUI_LIB /D _USING_V110_SDK71_ /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_ui_chess_operational_layer.cpp GeneratedFiles\Debug\moc_ui_chess_path_marker_layer.cpp model\base\action\game_action_result.cpp model\base\grid\grid_index.cpp model\chess\actions\chess_action_error.cpp model\chess\chess_rule_adapter.cpp model\chess\stockfish_converter.cpp model\chess\chess_trait.cpp view\chess\operational\ui_chess_operational_layer.cpp view\chess\operational\ui_chess_path_marker_layer.cpp
+         moc_ui_chess_operational_layer.cpp
+         moc_ui_chess_path_marker_layer.cpp
+         game_action_result.cpp
+         grid_index.cpp
+         chess_action_error.cpp
+         chess_rule_adapter.cpp
+         stockfish_converter.cpp
+         chess_trait.cpp
+         ui_chess_operational_layer.cpp
+         ui_chess_path_marker_layer.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Work\common-project\tool_kits\Win32\Debug\game_d.lib" /NOLOGO Debug\moc_ui_chess_operational_layer.obj
+         Debug\moc_ui_chess_path_marker_layer.obj
+         Debug\game_action_result.obj
+         Debug\grid_index.obj
+         Debug\chess_action_error.obj
+         Debug\chess_rule_adapter.obj
+         Debug\stockfish_converter.obj
+         Debug\chess_trait.obj
+         Debug\ui_chess_operational_layer.obj
+         Debug\ui_chess_path_marker_layer.obj
+         game.vcxproj -> D:\Work\common-project\tool_kits\Win32\Debug\game_d.lib
+       PostBuildEvent:
+         del "D:\Work\common-project\tool_kits\..\..\libs\include\game\" /q /f /s
+         rmdir "D:\Work\common-project\tool_kits\..\..\libs\include\game\"
+         xcopy "D:\Work\common-project\tool_kits\game\*.h" "D:\Work\common-project\tool_kits\..\..\libs\include\game\" /S /E /Y
+         xcopy "D:\Work\common-project\tool_kits\Win32\Debug\game_d.lib" "D:\Work\common-project\tool_kits\..\..\libs\" /S /E /Y
+         :VCEnd
+         删除文件 - D:\Work\libs\include\game\macros.h
+         删除文件 - D:\Work\libs\include\game\model\base\client_type.h
+         删除文件 - D:\Work\libs\include\game\model\base\usage_type.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action_facotry.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action_move_base.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action_result.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action_result_extra.h
+         删除文件 - D:\Work\libs\include\game\model\base\action\game_action_with_result.h
+         删除文件 - D:\Work\libs\include\game\model\base\board\game_board.h
+         删除文件 - D:\Work\libs\include\game\model\base\board\game_board_base.h
+         删除文件 - D:\Work\libs\include\game\model\base\board\game_board_base_fwd.h
+         删除文件 - D:\Work\libs\include\game\model\base\board\game_board_observer.h
+         删除文件 - D:\Work\libs\include\game\model\base\board\game_board_type.h
+         删除文件 - D:\Work\libs\include\game\model\base\chess\chess_info.h
+         删除文件 - D:\Work\libs\include\game\model\base\chess\chess_info_adapter.h
+         删除文件 - D:\Work\libs\include\game\model\base\chess\chess_info_matrix.h
+         删除文件 - D:\Work\libs\include\game\model\base\chess\chess_variation.h
+         删除文件 - D:\Work\libs\include\game\model\base\grid\grid_index.h
+         删除文件 - D:\Work\libs\include\game\model\base\notation\notation.h
+         删除文件 - D:\Work\libs\include\game\model\base\record\custom_record.h
+         删除文件 - D:\Work\libs\include\game\model\base\record\game_action_index_with_state.h
+         删除文件 - D:\Work\libs\include\game\model\base\record\game_record.h
+         删除文件 - D:\Work\libs\include\game\model\chess\chess_board_info_adapter_for_rule.h
+         删除文件 - D:\Work\libs\include\game\model\chess\chess_enum.h
+         删除文件 - D:\Work\libs\include\game\model\chess\chess_game_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\chess_record.h
+         删除文件 - D:\Work\libs\include\game\model\chess\chess_trait.h
+         删除文件 - D:\Work\libs\include\game\model\chess\stockfish_converter.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_action_error.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_action_friends.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_class_runntime_info.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_clear_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_factory.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_move_insideof_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_move_into_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_move_outof_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_new_board.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_new_board_ex.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_notate_manually.h
+         删除文件 - D:\Work\libs\include\game\model\chess\actions\chess_game_action_types.h
+         删除文件 - D:\Work\libs\include\game\model\chess\simple_path_rule\chess_path_rule.h
+         删除文件 - D:\Work\libs\include\game\model\chess\simple_path_rule\move_detail.h
+         删除文件 - D:\Work\libs\include\game\model\chess\simple_path_rule\move_type.h
+         删除文件 - D:\Work\libs\include\game\model\command_handler\command_conflict_level.h
+         删除文件 - D:\Work\libs\include\game\model\command_handler\command_handler.h
+         删除文件 - D:\Work\libs\include\game\model\command_handler\command_handler_fwd.h
+         删除文件 - D:\Work\libs\include\game\model\command_handler\game_board_wrapper.h
+         删除文件 - D:\Work\libs\include\game\model\go\go_enum.h
+         删除文件 - D:\Work\libs\include\game\model\go\go_game_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\go_record.h
+         删除文件 - D:\Work\libs\include\game\model\go\go_trait.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_action_error.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_action_friends.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_class_runntime_info.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_clear_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_factory.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_move_insideof_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_move_into_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_move_outof_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_new_board.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_new_board_ex.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_notate_manually.h
+         删除文件 - D:\Work\libs\include\game\model\go\actions\go_game_action_types.h
+         删除文件 - D:\Work\libs\include\game\model\go\rule\go_group.h
+         删除文件 - D:\Work\libs\include\game\model\go\rule\go_rule.h
+         删除文件 - D:\Work\libs\include\game\model\message_processor\message_processor.h
+         删除文件 - D:\Work\libs\include\game\view\animation\ui_animation_delegate.h
+         删除文件 - D:\Work\libs\include\game\view\animation\ui_animation_layer.h
+         删除文件 - D:\Work\libs\include\game\view\animation\ui_grid_mark.h
+         删除文件 - D:\Work\libs\include\game\view\arrow_line\ui_arrow_line.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_chess_basket_base.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_chess_face_fwd.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_chess_face_impl.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_game_board_base.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_game_board_layout_type.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_game_board_wrapper.h
+         删除文件 - D:\Work\libs\include\game\view\base\ui_operational_layer.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_base.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_grid.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_mark.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_state.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_with_mixins.h
+         删除文件 - D:\Work\libs\include\game\view\base\chess_piece\ui_chess_piece_with_trait.h
+         删除文件 - D:\Work\libs\include\game\view\chess\ui_chess_game_board.h
+         删除文件 - D:\Work\libs\include\game\view\chess\ui_chess_game_board_wrapper.h
+         删除文件 - D:\Work\libs\include\game\view\chess\ui_chess_piece.h
+         删除文件 - D:\Work\libs\include\game\view\chess\baskets\ui_chess_basket_o2o.h
+         删除文件 - D:\Work\libs\include\game\view\chess\baskets\ui_chess_piece_in_basket.h
+         删除文件 - D:\Work\libs\include\game\view\chess\operational\ui_chess_operational_delegate.h
+         删除文件 - D:\Work\libs\include\game\view\chess\operational\ui_chess_operational_layer.h
+         删除文件 - D:\Work\libs\include\game\view\chess\operational\ui_chess_path_marker_layer.h
+         删除文件 - D:\Work\libs\include\game\view\go\ui_go_game_board.h
+         删除文件 - D:\Work\libs\include\game\view\go\ui_go_game_board_wrapper.h
+         删除文件 - D:\Work\libs\include\game\view\go\ui_go_piece.h
+         删除文件 - D:\Work\libs\include\game\view\go\baskets\ui_go_basket_base.h
+         删除文件 - D:\Work\libs\include\game\view\go\baskets\ui_go_basket_o2o.h
+         删除文件 - D:\Work\libs\include\game\view\go\baskets\ui_go_color_basket.h
+         删除文件 - D:\Work\libs\include\game\view\go\baskets\ui_go_piece_in_basket.h
+         删除文件 - D:\Work\libs\include\game\view\go\operational\ui_go_operational_delegate.h
+         删除文件 - D:\Work\libs\include\game\view\go\operational\ui_go_operational_layer.h
+         删除文件 - D:\Work\libs\include\game\view\scale_line\ui_scale_line.h
+         删除文件 - D:\Work\libs\include\game\view\scale_line\ui_scale_line_layer.h
+         删除文件 - D:\Work\libs\include\game\view\widget_with_pixmap\widget_with_pixmap.h
+         目录不是空的。
+         D:\Work\common-project\tool_kits\game\macros.h
+         D:\Work\common-project\tool_kits\game\model\base\action\game_action_result.h
+         D:\Work\common-project\tool_kits\game\model\base\board\game_board_type.h
+         D:\Work\common-project\tool_kits\game\model\base\chess\chess_info.h
+         D:\Work\common-project\tool_kits\game\model\base\chess\chess_info_adapter.h
+         D:\Work\common-project\tool_kits\game\model\base\chess\chess_variation.h
+         D:\Work\common-project\tool_kits\game\model\base\grid\grid_index.h
+         D:\Work\common-project\tool_kits\game\model\chess\chess_board_info_adapter_for_rule.h
+         D:\Work\common-project\tool_kits\game\model\chess\chess_enum.h
+         D:\Work\common-project\tool_kits\game\model\chess\chess_rule_adapter.h
+         D:\Work\common-project\tool_kits\game\model\chess\chess_trait.h
+         D:\Work\common-project\tool_kits\game\model\chess\stockfish_converter.h
+         D:\Work\common-project\tool_kits\game\model\chess\actions\chess_action_error.h
+         D:\Work\common-project\tool_kits\game\model\chess\simple_path_rule\chess_path_rule.h
+         D:\Work\common-project\tool_kits\game\model\chess\simple_path_rule\move_detail.h
+         D:\Work\common-project\tool_kits\game\model\chess\simple_path_rule\move_type.h
+         D:\Work\common-project\tool_kits\game\model\go\go_enum.h
+         D:\Work\common-project\tool_kits\game\model\go\go_trait.h
+         D:\Work\common-project\tool_kits\game\model\go\rule\go_group.h
+         D:\Work\common-project\tool_kits\game\model\go\rule\go_rule.h
+         D:\Work\common-project\tool_kits\game\view\chess\operational\ui_chess_operational_delegate.h
+         D:\Work\common-project\tool_kits\game\view\chess\operational\ui_chess_operational_layer.h
+         D:\Work\common-project\tool_kits\game\view\chess\operational\ui_chess_path_marker_layer.h
+         复制了 23 个文件
+         D:\Work\common-project\tool_kits\Win32\Debug\game_d.lib
+         复制了 1 个文件
+     1>Done Building Project "D:\Work\common-project\tool_kits\game\game.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.70

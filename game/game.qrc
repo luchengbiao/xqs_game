@@ -1,0 +1,76 @@
+<RCC>
+  <qresource  prefix="/common">
+    <file>images/common/basket_title.png</file>
+    <file>images/common/disabled_flag.png</file>
+  </qresource>
+  
+  <qresource  prefix="/chess">
+    <file>images/chess/pawn_red.png</file>
+    <file>images/chess/pawn_red_moving.png</file>
+    <file>images/chess/pawn_red_selected.png</file>
+    <file>images/chess/rook_red.png</file>
+    <file>images/chess/rook_red_moving.png</file>
+    <file>images/chess/rook_red_selected.png</file>
+    <file>images/chess/knight_red.png</file>
+    <file>images/chess/knight_red_moving.png</file>
+    <file>images/chess/knight_red_selected.png</file>
+    <file>images/chess/bishop_red.png</file>
+    <file>images/chess/bishop_red_moving.png</file>
+    <file>images/chess/bishop_red_selected.png</file>
+    <file>images/chess/queen_red.png</file>
+    <file>images/chess/queen_red_moving.png</file>
+    <file>images/chess/queen_red_selected.png</file>
+    <file>images/chess/king_red.png</file>
+    <file>images/chess/king_red_moving.png</file>
+    <file>images/chess/king_red_selected.png</file>
+    <file>images/chess/pawn_black.png</file>
+    <file>images/chess/pawn_black_moving.png</file>
+    <file>images/chess/pawn_black_selected.png</file>
+    <file>images/chess/rook_black.png</file>
+    <file>images/chess/rook_black_moving.png</file>
+    <file>images/chess/rook_black_selected.png</file>
+    <file>images/chess/knight_black.png</file>
+    <file>images/chess/knight_black_moving.png</file>
+    <file>images/chess/knight_black_selected.png</file>
+    <file>images/chess/bishop_black.png</file>
+    <file>images/chess/bishop_black_moving.png</file>
+    <file>images/chess/bishop_black_selected.png</file>
+    <file>images/chess/queen_black.png</file>
+    <file>images/chess/queen_black_moving.png</file>
+    <file>images/chess/queen_black_selected.png</file>
+    <file>images/chess/king_black.png</file>
+    <file>images/chess/king_black_moving.png</file>
+    <file>images/chess/king_black_selected.png</file>
+    <file>images/chess/chess_basket.png</file>
+    <file>images/chess/chess_board.png</file>
+    <file>images/chess/grid_bk.png</file>
+  </qresource>
+  
+  <qresource  prefix="/go">
+    <file>images/go/9_black.png</file>
+    <file>images/go/9_black_moving.png</file>
+    <file>images/go/9_black_selected.png</file>
+    <file>images/go/13_black.png</file>
+    <file>images/go/13_black_moving.png</file>
+    <file>images/go/13_black_selected.png</file>
+    <file>images/go/19_black.png</file>
+    <file>images/go/19_black_moving.png</file>
+    <file>images/go/19_black_selected.png</file>
+    <file>images/go/9_white.png</file>
+    <file>images/go/9_white_moving.png</file>
+    <file>images/go/9_white_selected.png</file>
+    <file>images/go/13_white.png</file>
+    <file>images/go/13_white_moving.png</file>
+    <file>images/go/13_white_selected.png</file>
+    <file>images/go/19_white.png</file>
+    <file>images/go/19_white_moving.png</file>
+    <file>images/go/19_white_selected.png</file>
+    <file>images/go/basket_black.png</file>
+    <file>images/go/basket_white.png</file>
+    <file>images/go/dot.png</file>
+    <file>images/go/go_board_9.png</file>
+    <file>images/go/go_board_13.png</file>
+    <file>images/go/go_board_19.png</file>
+    <file>images/go/go_board_bk.png</file>
+  </qresource>
+</RCC>

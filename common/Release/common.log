@@ -1,0 +1,60 @@
+﻿Build started 2018/9/29 14:29:12.
+     1>Project "D:\Work\common-project\tool_kits\common\common.vcxproj" on node 5 (Rebuild target(s)).
+     1>CustomBuild:
+         Moc'ing shortcut_manager.h...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_shortcut_manager.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_shortcut_manager.cpp, GeneratedFiles\Release\moc_shortcut_manager.cpp.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Release /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtWidgets /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /I..\http_request\ /I..\..\..\libs\include\ /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtXml /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtGui /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D COMMON_LIB /D QT_XML_LIB /D QT_GUI_LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cpu\cpu_memory_detect.cpp cpu\cpu_usage.cpp GeneratedFiles\Release\moc_shortcut_manager.cpp setting\common_setting.cpp Shortcut\shortcut_manager.cpp synchronization\count_down_latch.cpp system\system_tool.cpp tool\api_common_tool.cpp tool\common_tool.cpp uiutils\ui_utils.cpp
+         cpu_memory_detect.cpp
+     1>cpu\cpu_memory_detect.cpp(266): warning C4293: '<<' : shift count negative or too big, undefined behavior
+     1>cpu\cpu_memory_detect.cpp(267): warning C4293: '<<' : shift count negative or too big, undefined behavior
+         cpu_usage.cpp
+         moc_shortcut_manager.cpp
+         common_setting.cpp
+         shortcut_manager.cpp
+         count_down_latch.cpp
+         system_tool.cpp
+         api_common_tool.cpp
+         common_tool.cpp
+         ui_utils.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Work\common-project\tool_kits\Win32\Release\common.lib" /LIBPATH:..\..\..\libs\ /NOLOGO Release\cpu_memory_detect.obj
+         Release\cpu_usage.obj
+         Release\moc_shortcut_manager.obj
+         Release\common_setting.obj
+         Release\shortcut_manager.obj
+         Release\count_down_latch.obj
+         Release\system_tool.obj
+         Release\api_common_tool.obj
+         Release\common_tool.obj
+         Release\ui_utils.obj
+         common.vcxproj -> D:\Work\common-project\tool_kits\Win32\Release\common.lib
+       PostBuildEvent:
+         xcopy "D:\Work\common-project\tool_kits\common\*.h" "D:\Work\common-project\tool_kits\..\..\libs\include\common\" /S /E /Y
+         xcopy "D:\Work\common-project\tool_kits\Win32\Release\common.lib" "D:\Work\common-project\tool_kits\..\..\libs\" /S /E /Y
+         :VCEnd
+         D:\Work\common-project\tool_kits\common\class_runtime_info\class_runtime_info.h
+         D:\Work\common-project\tool_kits\common\cpu\cpu_memory_detect.h
+         D:\Work\common-project\tool_kits\common\cpu\cpu_usage.h
+         D:\Work\common-project\tool_kits\common\cpu\process_task_result.h
+         D:\Work\common-project\tool_kits\common\macros\class_member_def.h
+         D:\Work\common-project\tool_kits\common\macros\json_def.h
+         D:\Work\common-project\tool_kits\common\setting\common_setting.h
+         D:\Work\common-project\tool_kits\common\setting\comm_static.h
+         D:\Work\common-project\tool_kits\common\Shortcut\shortcut_manager.h
+         D:\Work\common-project\tool_kits\common\synchronization\count_down_latch.h
+         D:\Work\common-project\tool_kits\common\system\system_tool.h
+         D:\Work\common-project\tool_kits\common\tool\api_common_tool.h
+         D:\Work\common-project\tool_kits\common\tool\common_tool.h
+         D:\Work\common-project\tool_kits\common\uiutils\ui_utils.h
+         D:\Work\common-project\tool_kits\common\weak_callback\singleton_support_weak_callback.h
+         D:\Work\common-project\tool_kits\common\weak_callback\weak_callback.h
+         复制了 16 个文件
+         D:\Work\common-project\tool_kits\Win32\Release\common.lib
+         复制了 1 个文件
+     1>Done Building Project "D:\Work\common-project\tool_kits\common\common.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.86

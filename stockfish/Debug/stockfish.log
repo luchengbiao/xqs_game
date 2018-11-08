@@ -1,0 +1,112 @@
+﻿Build started 2018/11/6 16:43:13.
+     1>Project "D:\Work\common-project\tool_kits\stockfish\stockfish.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Work\common-project\tool_kits\stockfish\..\\" /I"D:\Work\common-project\tool_kits\stockfish\src\\" /I..\..\..\libs\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt adapter\position_adapter.cpp src\benchmark.cpp src\bitbase.cpp src\bitboard.cpp src\book.cpp src\endgame.cpp src\evaluate.cpp src\material.cpp src\misc.cpp src\movegen.cpp src\movepick.cpp src\notation.cpp src\pawns.cpp src\position.cpp src\search.cpp src\thread.cpp src\timeman.cpp src\tt.cpp src\uci.cpp src\ucioption.cpp
+         ucioption.cpp
+         uci.cpp
+         tt.cpp
+         timeman.cpp
+         thread.cpp
+         search.cpp
+         position.cpp
+         pawns.cpp
+         notation.cpp
+         movepick.cpp
+         movegen.cpp
+         misc.cpp
+         material.cpp
+         evaluate.cpp
+         endgame.cpp
+         book.cpp
+         bitboard.cpp
+         bitbase.cpp
+         benchmark.cpp
+         position_adapter.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Work\common-project\tool_kits\Debug\stockfish_d.lib" /NOLOGO Debug\position_adapter.obj
+         Debug\benchmark.obj
+         Debug\bitbase.obj
+         Debug\bitboard.obj
+         Debug\book.obj
+         Debug\endgame.obj
+         Debug\evaluate.obj
+         Debug\material.obj
+         Debug\misc.obj
+         Debug\movegen.obj
+         Debug\movepick.obj
+         Debug\notation.obj
+         Debug\pawns.obj
+         Debug\position.obj
+         Debug\search.obj
+         Debug\thread.obj
+         Debug\timeman.obj
+         Debug\tt.obj
+         Debug\uci.obj
+         Debug\ucioption.obj
+         stockfish.vcxproj -> D:\Work\common-project\tool_kits\Debug\stockfish_d.lib
+       PostBuildEvent:
+         del "D:\Work\common-project\tool_kits\..\..\libs\include\stockfish\" /q /f /s
+         rmdir "D:\Work\common-project\tool_kits\..\..\libs\include\stockfish\"
+         xcopy "D:\Work\common-project\tool_kits\stockfish\*.h" "D:\Work\common-project\tool_kits\..\..\libs\include\stockfish\" /S  /Y
+         xcopy "D:\Work\common-project\tool_kits\Debug\stockfish_d.lib" "D:\Work\common-project\tool_kits\..\..\libs\" /S /E /Y
+         :VCEnd
+         删除文件 - D:\Work\libs\include\stockfish\macros.h
+         删除文件 - D:\Work\libs\include\stockfish\adapter\move_info.h
+         删除文件 - D:\Work\libs\include\stockfish\adapter\position_adapter.h
+         删除文件 - D:\Work\libs\include\stockfish\adapter\position_adapter_fwd.h
+         删除文件 - D:\Work\libs\include\stockfish\src\bitboard.h
+         删除文件 - D:\Work\libs\include\stockfish\src\bitcount.h
+         删除文件 - D:\Work\libs\include\stockfish\src\book.h
+         删除文件 - D:\Work\libs\include\stockfish\src\endgame.h
+         删除文件 - D:\Work\libs\include\stockfish\src\evaluate.h
+         删除文件 - D:\Work\libs\include\stockfish\src\material.h
+         删除文件 - D:\Work\libs\include\stockfish\src\misc.h
+         删除文件 - D:\Work\libs\include\stockfish\src\movegen.h
+         删除文件 - D:\Work\libs\include\stockfish\src\movepick.h
+         删除文件 - D:\Work\libs\include\stockfish\src\notation.h
+         删除文件 - D:\Work\libs\include\stockfish\src\pawns.h
+         删除文件 - D:\Work\libs\include\stockfish\src\platform.h
+         删除文件 - D:\Work\libs\include\stockfish\src\position.h
+         删除文件 - D:\Work\libs\include\stockfish\src\psqtab.h
+         删除文件 - D:\Work\libs\include\stockfish\src\rkiss.h
+         删除文件 - D:\Work\libs\include\stockfish\src\search.h
+         删除文件 - D:\Work\libs\include\stockfish\src\thread.h
+         删除文件 - D:\Work\libs\include\stockfish\src\timeman.h
+         删除文件 - D:\Work\libs\include\stockfish\src\tt.h
+         删除文件 - D:\Work\libs\include\stockfish\src\types.h
+         删除文件 - D:\Work\libs\include\stockfish\src\ucioption.h
+         目录不是空的。
+         D:\Work\common-project\tool_kits\stockfish\macros.h
+         D:\Work\common-project\tool_kits\stockfish\adapter\move_info.h
+         D:\Work\common-project\tool_kits\stockfish\adapter\position_adapter.h
+         D:\Work\common-project\tool_kits\stockfish\adapter\position_adapter_fwd.h
+         D:\Work\common-project\tool_kits\stockfish\src\bitboard.h
+         D:\Work\common-project\tool_kits\stockfish\src\bitcount.h
+         D:\Work\common-project\tool_kits\stockfish\src\book.h
+         D:\Work\common-project\tool_kits\stockfish\src\endgame.h
+         D:\Work\common-project\tool_kits\stockfish\src\evaluate.h
+         D:\Work\common-project\tool_kits\stockfish\src\material.h
+         D:\Work\common-project\tool_kits\stockfish\src\misc.h
+         D:\Work\common-project\tool_kits\stockfish\src\movegen.h
+         D:\Work\common-project\tool_kits\stockfish\src\movepick.h
+         D:\Work\common-project\tool_kits\stockfish\src\notation.h
+         D:\Work\common-project\tool_kits\stockfish\src\pawns.h
+         D:\Work\common-project\tool_kits\stockfish\src\platform.h
+         D:\Work\common-project\tool_kits\stockfish\src\position.h
+         D:\Work\common-project\tool_kits\stockfish\src\psqtab.h
+         D:\Work\common-project\tool_kits\stockfish\src\rkiss.h
+         D:\Work\common-project\tool_kits\stockfish\src\search.h
+         D:\Work\common-project\tool_kits\stockfish\src\thread.h
+         D:\Work\common-project\tool_kits\stockfish\src\timeman.h
+         D:\Work\common-project\tool_kits\stockfish\src\tt.h
+         D:\Work\common-project\tool_kits\stockfish\src\types.h
+         D:\Work\common-project\tool_kits\stockfish\src\ucioption.h
+         复制了 25 个文件
+         D:\Work\common-project\tool_kits\Debug\stockfish_d.lib
+         复制了 1 个文件
+     1>Done Building Project "D:\Work\common-project\tool_kits\stockfish\stockfish.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.16

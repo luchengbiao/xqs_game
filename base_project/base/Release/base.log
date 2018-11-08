@@ -1,0 +1,191 @@
+﻿Build started 2018/9/29 14:28:11.
+     1>Project "D:\Work\common-project\base_project\base\base.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I.\ /Zi /nologo /W4 /WX /O2 /Oi /Oy- /D WIN32 /D NDEBUG /D _LIB /D NOMINMAX /D WITH_ENCRYPT /D CURL_STATICLIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /wd4100 /wd4127 /wd4189 /wd4244 /wd4245 /wd4310 /wd4355 /wd4505 /analyze- /errorReport:prompt encrypt\des.cpp file\file_util.cpp file\file_util_posix.cpp file\file_util_win.cpp framework\default_message_pump.cpp framework\message_loop.cpp framework\message_loop_proxy.cpp framework\message_pump.cpp framework\win_io_message_pump.cpp framework\win_message_pump.cpp framework\win_ui_message_pump.cpp hardware\cpu.cpp network\network_util.cpp synchronization\lock_posix.cpp synchronization\lock_win.cpp synchronization\semaphore_posix.cpp synchronization\semaphore_win.cpp synchronization\waitable_event_posix.cpp synchronization\waitable_event_win.cpp system\api_setting.cpp third_party\chrome\atomicops_internals_x86_gcc.cc third_party\modp_b64\modp_b64.cc thread\framework_thread.cpp thread\thread_local_posix.cpp thread\thread_local_win.cpp thread\thread_manager.cpp thread\thread_posix.cpp thread\thread_win.cpp time\time.cpp time\time_posix.cpp time\time_win.cpp util\at_exit.cpp util\base64.cpp util\cmd_line_args.cpp util\string_number_conversions.cpp util\string_util.cpp util\util.cpp win32\object_watcher.cpp win32\path_util.cpp win32\platform_string_util.cpp win32\security_util.cpp win32\shared_memory.cpp win32\win_util.cpp
+         des.cpp
+         file_util.cpp
+         file_util_posix.cpp
+         file_util_win.cpp
+         default_message_pump.cpp
+         message_loop.cpp
+         message_loop_proxy.cpp
+         message_pump.cpp
+         win_io_message_pump.cpp
+         win_message_pump.cpp
+         win_ui_message_pump.cpp
+         cpu.cpp
+         network_util.cpp
+         lock_posix.cpp
+         lock_win.cpp
+         semaphore_posix.cpp
+         semaphore_win.cpp
+         waitable_event_posix.cpp
+         waitable_event_win.cpp
+         api_setting.cpp
+         Generating Code...
+         Compiling...
+         atomicops_internals_x86_gcc.cc
+         modp_b64.cc
+         framework_thread.cpp
+         thread_local_posix.cpp
+         thread_local_win.cpp
+         thread_manager.cpp
+         thread_posix.cpp
+         thread_win.cpp
+         time.cpp
+         time_posix.cpp
+         time_win.cpp
+         at_exit.cpp
+         base64.cpp
+         cmd_line_args.cpp
+         string_number_conversions.cpp
+         string_util.cpp
+         util.cpp
+         object_watcher.cpp
+         path_util.cpp
+         platform_string_util.cpp
+         Generating Code...
+         Compiling...
+         security_util.cpp
+         shared_memory.cpp
+         win_util.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I.\ /Zi /nologo /W4 /WX /O2 /Oi /Oy- /D WIN32 /D NDEBUG /D _LIB /D NOMINMAX /D WITH_ENCRYPT /D CURL_STATICLIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TC /wd4100 /wd4127 /wd4189 /wd4244 /wd4245 /wd4310 /wd4355 /wd4505 /analyze- /errorReport:prompt third_party\convert_utf\ConvertUTF.c
+         ConvertUTF.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Work\common-project\base_project\Win32\Release\base.lib" Ws2_32.lib Iphlpapi.lib netapi32.lib Snmpapi.lib /LIBPATH:"D:\Work\common-project\base_project\base\..\..\libs\\" /NOLOGO Release\des.obj
+         Release\file_util.obj
+         Release\file_util_posix.obj
+         Release\file_util_win.obj
+         Release\default_message_pump.obj
+         Release\message_loop.obj
+         Release\message_loop_proxy.obj
+         Release\message_pump.obj
+         Release\win_io_message_pump.obj
+         Release\win_message_pump.obj
+         Release\win_ui_message_pump.obj
+         Release\cpu.obj
+         Release\network_util.obj
+         Release\lock_posix.obj
+         Release\lock_win.obj
+         Release\semaphore_posix.obj
+         Release\semaphore_win.obj
+         Release\waitable_event_posix.obj
+         Release\waitable_event_win.obj
+         Release\api_setting.obj
+         Release\atomicops_internals_x86_gcc.obj
+         Release\ConvertUTF.obj
+         Release\modp_b64.obj
+         Release\framework_thread.obj
+         Release\thread_local_posix.obj
+         Release\thread_local_win.obj
+         Release\thread_manager.obj
+         Release\thread_posix.obj
+         Release\thread_win.obj
+         Release\time.obj
+         Release\time_posix.obj
+         Release\time_win.obj
+         Release\at_exit.obj
+         Release\base64.obj
+         Release\cmd_line_args.obj
+         Release\string_number_conversions.obj
+         Release\string_util.obj
+         Release\util.obj
+         Release\object_watcher.obj
+         Release\path_util.obj
+         Release\platform_string_util.obj
+         Release\security_util.obj
+         Release\shared_memory.obj
+         Release\win_util.obj
+     1>Iphlpapi.lib(IPHLPAPI.DLL) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in Ws2_32.lib(WS2_32.dll); second definition ignored
+     1>Iphlpapi.lib(IPHLPAPI.DLL) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>netapi32.lib(NETAPI32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in Ws2_32.lib(WS2_32.dll); second definition ignored
+     1>netapi32.lib(NETAPI32.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>Snmpapi.lib(snmpapi.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in Ws2_32.lib(WS2_32.dll); second definition ignored
+     1>Snmpapi.lib(snmpapi.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>time_posix.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>thread_local_posix.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>file_util_posix.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         base.vcxproj -> D:\Work\common-project\base_project\Win32\Release\base.lib
+       PostBuildEvent:
+         xcopy "D:\Work\common-project\base_project\base\*.h" "D:\Work\common-project\base_project\..\..\libs\include\base\" /S /E /Y
+         xcopy "D:\Work\common-project\base_project\build\*.h" "D:\Work\common-project\base_project\..\..\libs\include\build\" /S /E /Y
+         xcopy "D:\Work\common-project\base_project\Win32\Release\base.lib" "D:\Work\common-project\base_project\..\..\libs\" /S /E /Y
+         :VCEnd
+         D:\Work\common-project\base_project\base\base_config.h
+         D:\Work\common-project\base_project\base\base_export.h
+         D:\Work\common-project\base_project\base\base_types.h
+         D:\Work\common-project\base_project\base\compiler_specific.h
+         D:\Work\common-project\base_project\base\error.h
+         D:\Work\common-project\base_project\base\macros.h
+         D:\Work\common-project\base_project\base\port.h
+         D:\Work\common-project\base_project\base\callback\callback.h
+         D:\Work\common-project\base_project\base\encrypt\des.h
+         D:\Work\common-project\base_project\base\encrypt\encrypt.h
+         D:\Work\common-project\base_project\base\encrypt\encrypt_impl.h
+         D:\Work\common-project\base_project\base\file\file_path.h
+         D:\Work\common-project\base_project\base\file\file_util.h
+         D:\Work\common-project\base_project\base\framework\default_message_pump.h
+         D:\Work\common-project\base_project\base\framework\message_loop.h
+         D:\Work\common-project\base_project\base\framework\message_loop_proxy.h
+         D:\Work\common-project\base_project\base\framework\message_pump.h
+         D:\Work\common-project\base_project\base\framework\observer_list.h
+         D:\Work\common-project\base_project\base\framework\task.h
+         D:\Work\common-project\base_project\base\framework\win_io_message_pump.h
+         D:\Work\common-project\base_project\base\framework\win_message_pump.h
+         D:\Work\common-project\base_project\base\framework\win_ui_message_pump.h
+         D:\Work\common-project\base_project\base\hardware\cpu.h
+         D:\Work\common-project\base_project\base\memory\blockbuffer.h
+         D:\Work\common-project\base_project\base\memory\deleter.h
+         D:\Work\common-project\base_project\base\memory\lazy_instance.h
+         D:\Work\common-project\base_project\base\memory\singleton.h
+         D:\Work\common-project\base_project\base\network\network_util.h
+         D:\Work\common-project\base_project\base\network\nio_base.h
+         D:\Work\common-project\base_project\base\synchronization\lock.h
+         D:\Work\common-project\base_project\base\synchronization\semaphore.h
+         D:\Work\common-project\base_project\base\synchronization\waitable_event.h
+         D:\Work\common-project\base_project\base\system\api_setting.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops_internals_arm_gcc.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops_internals_atomicword_compat.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops_internals_x86_gcc.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops_internals_x86_macosx.h
+         D:\Work\common-project\base_project\base\third_party\chrome\atomicops_internals_x86_msvc.h
+         D:\Work\common-project\base_project\base\third_party\convert_utf\ConvertUTF.h
+         D:\Work\common-project\base_project\base\third_party\modp_b64\modp_b64.h
+         D:\Work\common-project\base_project\base\third_party\modp_b64\modp_b64_data.h
+         D:\Work\common-project\base_project\base\thread\framework_thread.h
+         D:\Work\common-project\base_project\base\thread\thread.h
+         D:\Work\common-project\base_project\base\thread\thread_local.h
+         D:\Work\common-project\base_project\base\thread\thread_manager.h
+         D:\Work\common-project\base_project\base\time\time.h
+         D:\Work\common-project\base_project\base\util\at_exit.h
+         D:\Work\common-project\base_project\base\util\auto_unregister.h
+         D:\Work\common-project\base_project\base\util\base64.h
+         D:\Work\common-project\base_project\base\util\cmd_line_args.h
+         D:\Work\common-project\base_project\base\util\string_number_conversions.h
+         D:\Work\common-project\base_project\base\util\string_util.h
+         D:\Work\common-project\base_project\base\util\template_util.h
+         D:\Work\common-project\base_project\base\util\unicode.h
+         D:\Work\common-project\base_project\base\util\util.h
+         D:\Work\common-project\base_project\base\util\valuemap.h
+         D:\Work\common-project\base_project\base\win32\object_watcher.h
+         D:\Work\common-project\base_project\base\win32\path_util.h
+         D:\Work\common-project\base_project\base\win32\platform_string_util.h
+         D:\Work\common-project\base_project\base\win32\scoped_win_handle.h
+         D:\Work\common-project\base_project\base\win32\security_util.h
+         D:\Work\common-project\base_project\base\win32\shared_memory.h
+         D:\Work\common-project\base_project\base\win32\win_util.h
+         复制了 64 个文件
+         D:\Work\common-project\base_project\build\build_config.h
+         D:\Work\common-project\base_project\build\stdafx.h
+         D:\Work\common-project\base_project\build\winsdk_config.h
+         D:\Work\common-project\base_project\build\xp_style_manifest_win.h
+         复制了 4 个文件
+         D:\Work\common-project\base_project\Win32\Release\base.lib
+         复制了 1 个文件
+     1>Done Building Project "D:\Work\common-project\base_project\base\base.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:17.80

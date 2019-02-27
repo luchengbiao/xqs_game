@@ -9,6 +9,8 @@
 #include <iostream>
 #include <fstream>
 #include <windows.h>
+#include <tchar.h>
+#include "cpu\cpu_device.h"
 
 const int CHN_NUM_CHAR_COUNT = 10;
 const char *chnNumChar[CHN_NUM_CHAR_COUNT] = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
@@ -266,17 +268,17 @@ namespace systembase
 			array.push_back(tmp_str);
 	}
 
-
 	std::wstring GetRegValue(const std::wstring& strUrl, const std::wstring& strKey)
 	{
-		std::wstring strValue = L"";
+		static std::wstring strValue = L"";
+
 		HKEY hKey = HKEY_LOCAL_MACHINE;
 		HKEY hKeyResult = NULL;
 		DWORD dwSize = 0;
 		DWORD dwDataType = 0;
 
 		//打开注册表
-		if (ERROR_SUCCESS == ::RegOpenKeyEx(hKey, strUrl.c_str(), 0, KEY_QUERY_VALUE, &hKeyResult))
+		if (strValue.empty() && ERROR_SUCCESS == ::RegOpenKeyEx(hKey, strUrl.c_str(), 0, KEY_QUERY_VALUE, &hKeyResult))
 		{
 			// 获取缓存的长度dwSize及类型dwDataType
 			::RegQueryValueEx(hKeyResult, strKey.c_str(), 0, &dwDataType, NULL, &dwSize);
@@ -307,11 +309,10 @@ namespace systembase
 			default:
 				break;
 			}
+
+			//关闭注册表
+			::RegCloseKey(hKeyResult);
 		}
-
-		//关闭注册表
-		::RegCloseKey(hKeyResult);
-
 
 		return strValue;
 	}
@@ -327,6 +328,72 @@ namespace systembase
 		}
 
 		return (hash & 0x7FFFFFFF);
+	}
+
+
+	std::string GetSystemInfo()
+	{
+		// 获取分辨率
+		int x = GetSystemMetrics(SM_CXSCREEN);
+		int y = GetSystemMetrics(SM_CYSCREEN);
+
+		// 获取操作系统
+		std::string os = GetOSVersionString();
+
+		// 获取系统位数
+
+		int sysBit = GetSystemBits();
+
+		// 获取系统内存
+		double memory = GetSystemTotalMemory() / 1024.0 / 1024.0;
+
+		std::string info_str = nbase::StringPrintf("resolution: %dx%d, OS: %s, systemBit: %dBit, memory: %.0lfGB", x, y, os.c_str(), sysBit, memory);
+		
+		return info_str;
+	}
+
+	__int64 GetSystemTotalMemory()
+	{
+		MEMORYSTATUSEX statex;
+		statex.dwLength = sizeof(statex);
+		GlobalMemoryStatusEx(&statex);
+
+		return statex.ullTotalPhys / 1024;
+	}
+
+	int GetSystemBits()
+	{
+		SYSTEM_INFO si;
+		SafeGetNativeSystemInfo(&si);
+		if (si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64 ||
+			si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_IA64)
+		{
+			return 64;
+		}
+		return 32;
+	}
+
+	std::string GetCpuInfo()
+	{
+		CpuDevice device;
+		return device.GetDeviceInfo();
+	}
+
+	VOID SafeGetNativeSystemInfo(__out LPSYSTEM_INFO lpSystemInfo)
+	{
+		if (NULL == lpSystemInfo)
+			return;
+		typedef VOID(WINAPI *LPFN_GetNativeSystemInfo)(LPSYSTEM_INFO lpSystemInfo);
+		LPFN_GetNativeSystemInfo nsInfo =
+			(LPFN_GetNativeSystemInfo)GetProcAddress(GetModuleHandle(_T("kernel32")), "GetNativeSystemInfo");;
+		if (NULL != nsInfo)
+		{
+			nsInfo(lpSystemInfo);
+		}
+		else
+		{
+			GetSystemInfo(lpSystemInfo);
+		}
 	}
 
 	void NumberToChinese(unsigned int num, std::string& chnStr)
@@ -388,6 +455,19 @@ namespace systembase
 			section = section / 10;
 		}
 	}
+
+	bool CheckIsTeacher(std::string accid)
+	{
+		if (!accid.empty() && accid[accid.size() - 1] == 's')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 }
 
 

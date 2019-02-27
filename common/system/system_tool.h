@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <wtypes.h>
+#include <winbase.h>
 
 namespace systembase
 {
@@ -28,4 +29,11 @@ namespace systembase
 
 	void NumberToChinese(unsigned int num, std::string& chnStr);
 	void SectionToChinese(unsigned int section, std::string& chnStr);
+	std::string GetSystemInfo();
+	int GetSystemBits();
+	VOID SafeGetNativeSystemInfo(__out LPSYSTEM_INFO lpSystemInfo);
+	__int64 GetSystemTotalMemory();
+	std::string GetCpuInfo();
+
+	bool CheckIsTeacher(std::string accid);
 }

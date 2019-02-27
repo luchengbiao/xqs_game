@@ -13,16 +13,16 @@ private:
 	V& _v;
 };
 
-class CountdownLatch::CountdownLatchPrivate
+class CountdownLatch::CountdownLatchImpl
 {
 public:
-	CountdownLatchPrivate()
+	CountdownLatchImpl()
 		: _count(0)
 		, _waiters(0)
 		, _notifyReason(NotifyReason::None)
 	{}
 
-	inline void	Reset(int count)
+	inline void	Reset(unsigned int count)
 	{
 		std::lock_guard<std::mutex> lock(_mutex);
 		_count = count;
@@ -56,7 +56,7 @@ public:
 		{
 			if (_waiters > 0)
 			{
-				_notifyReason = NotifyReason::Normal;
+				_notifyReason = NotifyReason::CountdownedToZero;
 
 				_condition.notify_all();
 			}
@@ -67,10 +67,10 @@ public:
 		return false;
 	}
 
-	inline bool	CountIsZero() const
+	inline unsigned int CurrentCounter() const
 	{
 		std::lock_guard<std::mutex> lock(_mutex);
-		return (_count == 0);
+		return _count;
 	}
 
 	inline NotifyReason	GetNotifyReason() const
@@ -87,53 +87,40 @@ private:
 };
 
 CountdownLatch::CountdownLatch()
-	: _data(new CountdownLatchPrivate)
+	: _impl(new CountdownLatchImpl)
 {}
 
-CountdownLatch::~CountdownLatch() = default;
-
-void CountdownLatch::Reset(int count)
+CountdownLatch::~CountdownLatch()
 {
-	if (_data)
-	{
-		_data->Reset(count);
-	}
+	delete _impl;
+}
+
+void CountdownLatch::Reset(unsigned int count)
+{
+	_impl->Reset(count);
 }
 
 void  CountdownLatch::Wait()
 {
-	if (_data)
-	{
-		_data->Wait();
-	}
+	_impl->Wait();
 }
 
 bool  CountdownLatch::Countdown()
 {
-	if (_data)
-	{
-		return _data->Countdown();
-	}
-
-	return true;
+	return _impl->Countdown();;
 }
 
-bool CountdownLatch::CountIsZero() const
+unsigned int CountdownLatch::CurrentCounter() const
 {
-	if (_data)
-	{
-		return _data->CountIsZero();
-	}
+	return _impl->CurrentCounter();
+}
 
-	return true;
+bool CountdownLatch::CurrentCounterIsZero() const
+{
+	return _impl->CurrentCounter() == 0;
 }
 
 CountdownLatch::NotifyReason CountdownLatch::GetNotifyReason() const
 {
-	if (_data)
-	{
-		return _data->GetNotifyReason();
-	}
-
-	return CountdownLatch::NotifyReason::None;
+	return _impl->GetNotifyReason();
 }

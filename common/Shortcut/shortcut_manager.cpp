@@ -79,10 +79,15 @@ bool ShortCutManager::ParseCommand(std::string command_str)
 						return true;
 					 }
 				 }
-
 				 else if (first_str == "classroom"&& !second_str.empty())
 				 {
 					 emit SignalMockOpenClassroom(second_str);
+				 }
+				 else if (first_str == "cmd_version" && !second_str.empty())
+				 {
+					 int version = 0;
+					 nbase::StringToInt(second_str, &version);
+					 emit SingalChangeVersion(version);
 				 }
 				 //指令可以一直往后加
 				 //else if(first_str == "TODO")
@@ -110,6 +115,10 @@ bool ShortCutManager::ParseCommand(std::string command_str)
 				 else if (sub_command == "mock_server_start")
 				 {
 					 emit SignalMockServerHeartStart();
+				 }
+				 else if (sub_command == "mock_own_stop")
+				 {
+					 emit SignalMockOwnStop();
 				 }
 				 else
 				 {

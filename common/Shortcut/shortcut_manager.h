@@ -21,10 +21,12 @@ signals:
 	void SignalMockServerHeartStop();//上课过程跟服务器保持心跳连接断开
 	void SignalMockServerHeartStart();//上课过程跟服务器保持心跳连接
 	void SignalMockOpenClassroom(std::string);
+	void SignalMockOwnStop();		//自己的数据通道连接断开
 
 	void SignalO2OPlayback(unsigned long long course_id);
 	void SignalO2MPlayback(unsigned long long course_id);
 	void SignalReadingSetting(bool);
+	void SingalChangeVersion(int);
 
 protected:
 private:

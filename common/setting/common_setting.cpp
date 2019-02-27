@@ -84,6 +84,12 @@ void CommonSetting::Load()
 			ApiSetting::SetOtherApiHost("API_SERVER_HOST", iter->second);
 		}
 
+		iter = m_setting_pair.find("WEB_HOST");
+		if (iter != m_setting_pair.end())
+		{
+			ApiSetting::SetOtherApiHost("WEB_HOST", iter->second);
+		}
+
 		iter = m_setting_pair.find("NIM_APPKEY");
 		if (iter != m_setting_pair.end())
 		{
@@ -93,6 +99,11 @@ void CommonSetting::Load()
 		if (iter != m_setting_pair.end())
 		{
 			ApiSetting::SetAppKey("AGORA_APP_ID", iter->second);
+		}
+		iter = m_setting_pair.find("BURIALPOINT_SECRET_KEY");
+		if (iter != m_setting_pair.end())
+		{
+			ApiSetting::SetAppKey("BURIALPOINT_SECRET_KEY", iter->second);
 		}
 		iter = m_setting_pair.find("SOCKET_HOST");
 		if (iter != m_setting_pair.end())

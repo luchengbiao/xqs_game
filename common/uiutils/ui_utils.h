@@ -1,6 +1,7 @@
 #ifndef __UI_UTILS_H__
 #define __UI_UTILS_H__
 #include <memory>
+#include <unordered_set>
 #include <QPoint>
 #include <QRect>
 
@@ -16,6 +17,31 @@ namespace UiUtils
 	QRect			GetWidgetGlobalGeometry(const QWidget* widget);
 
 	void			AlignWidgetOnCenter(QWidget* widgetSrc, const QWidget* widgetDst);
+	void			AlignWidgetOnLeftTop(QWidget* widgetSrc, const QWidget* widgetDst);
+
+	// pos post is in parent local-coordinate
+	void			MoveWidgetAnchorPointTo(QWidget* widget, const QPoint& pos, const QPointF& anchorPoint);
+	void			MoveWidgetLeftTopTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetMiddleTopTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetRightTopTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetLeftMiddleTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetMiddleTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetRightMiddleTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetLeftBottomTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetMiddleBottomTo(QWidget* widget, const QPoint& pos);
+	void			MoveWidgetRightBottomTo(QWidget* widget, const QPoint& pos);
+
+	// pos returned is in parent local-coordinate
+	QPoint			WidgetPosByAnchorPoint(const QWidget* widget, const QPointF& anchorPoint);
+	QPoint			WidgetPosOfLeftTop(QWidget* widget);
+	QPoint			WidgetPosOfMiddleTop(QWidget* widget);
+	QPoint			WidgetPosOfRightTop(QWidget* widget);
+	QPoint			WidgetPosOfLeftMiddle(QWidget* widget);
+	QPoint			WidgetPosOfMiddle(QWidget* widget);
+	QPoint			WidgetPosOfRightMiddle(QWidget* widget);
+	QPoint			WidgetPosOfLeftBottom(QWidget* widget);
+	QPoint			WidgetPosOfMiddleBottom(QWidget* widget);
+	QPoint			WidgetPosOfRightBottom(QWidget* widget);
 
 	// pos post is in parent local-coordinate
 	void			MoveWidgetAnchorPointTo(QWidget* widget, const QPoint& pos, const QPointF& anchorPoint);
@@ -45,6 +71,11 @@ namespace UiUtils
 
 	void			RemoveAllWidgetsInLayout(QLayout*);
 	void			RemoveAllChildWidgets(QWidget*);
+
+
+	void			DisableDirectChildrenExcept(QWidget* parent, const std::unordered_set<QWidget*>& excepts);
+
+	QWidget*		GetAncestorWidget(QWidget*);
 
 	/*
 	**  功能			: 九宫格图处理

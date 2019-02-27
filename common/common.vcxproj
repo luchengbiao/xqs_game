@@ -86,32 +86,57 @@ xcopy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)..\..\libs\" /S /E /Y<
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cpu\cpu_device.cpp" />
     <ClCompile Include="cpu\cpu_memory_detect.cpp" />
     <ClCompile Include="cpu\cpu_usage.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_qobject_support_weak_callback.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_shortcut_manager.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qobject_support_weak_callback.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_shortcut_manager.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="setting\cef_data_setting.cpp" />
     <ClCompile Include="setting\common_setting.cpp" />
     <ClCompile Include="Shortcut\shortcut_manager.cpp" />
     <ClCompile Include="synchronization\count_down_latch.cpp" />
     <ClCompile Include="system\system_tool.cpp" />
     <ClCompile Include="tool\api_common_tool.cpp" />
     <ClCompile Include="tool\common_tool.cpp" />
+    <ClCompile Include="tool\qwidget_tool.cpp" />
     <ClCompile Include="uiutils\ui_utils.cpp" />
+    <ClCompile Include="weak_callback\qobject_support_weak_callback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class_runtime_info\class_runtime_info.h" />
+    <ClInclude Include="cpu\cpu_device.h" />
     <ClInclude Include="cpu\cpu_memory_detect.h" />
     <ClInclude Include="cpu\cpu_usage.h" />
     <ClInclude Include="cpu\process_task_result.h" />
+    <ClInclude Include="macros\assert.h" />
     <ClInclude Include="macros\class_member_def.h" />
     <ClInclude Include="macros\json_def.h" />
+    <ClInclude Include="setting\cef_data_setting.h" />
     <ClInclude Include="setting\common_setting.h" />
     <ClInclude Include="setting\comm_static.h" />
+    <ClInclude Include="tool\qwidget_tool.h" />
+    <ClInclude Include="uiutils\hash_for_QPoint.h" />
     <ClInclude Include="uiutils\ui_utils.h" />
+    <CustomBuild Include="weak_callback\qobject_support_weak_callback.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qobject_support_weak_callback.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DCOMMON_LIB -DQT_XML_LIB -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtWidgets" "-I.\..\..\..\libs\include" "-I.\..\http_request" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qobject_support_weak_callback.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DCOMMON_LIB -DQT_XML_LIB -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtCore" "-I.\..\http_request" "-I.\..\..\..\libs\include" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
     <CustomBuild Include="weak_callback\singleton_support_weak_callback.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </Message>
@@ -141,6 +166,11 @@ xcopy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)..\..\libs\" /S /E /Y<
     <ClInclude Include="system\system_tool.h" />
     <ClInclude Include="tool\api_common_tool.h" />
     <ClInclude Include="tool\common_tool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\channel_manager\channel_manager.vcxproj">
+      <Project>{59c7515d-3715-4326-a12b-a4f736ebca70}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

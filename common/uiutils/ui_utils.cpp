@@ -39,6 +39,23 @@ namespace UiUtils
 		}
 	}
 
+	void AlignWidgetOnLeftTop(QWidget* widgetSrc, const QWidget* widgetDst)
+	{
+		auto globalLT = widgetDst->mapToGlobal(QPoint(0, 0));
+
+		auto widgetParent = dynamic_cast<QWidget*>(widgetSrc->parent());
+		if (widgetParent)
+		{
+			auto localLT = widgetParent->mapFromGlobal(globalLT);
+
+			widgetSrc->move(localLT);
+		}
+		else
+		{
+			widgetSrc->move(globalLT);
+		}
+	}
+
 #define LEFT_ANCHOR		0.0f
 #define RGIHT_ANCHOR	1.0f
 #define TOP_ANCHOR		0.0f
@@ -178,6 +195,38 @@ namespace UiUtils
 		{
 			item->deleteLater();
 		}
+	}
+
+
+	void DisableDirectChildrenExcept(QWidget* parent, const std::unordered_set<QWidget*>& excepts)
+	{
+		auto list = parent->findChildren<QWidget*>(QString(), Qt::FindChildOption::FindDirectChildrenOnly);
+		for (auto child : list)
+		{
+			if (excepts.find(child) == excepts.end())
+			{
+				child->setDisabled(true);
+			}
+		}
+	}
+
+	QWidget* GetAncestorWidget(QWidget* widget)
+	{
+		QWidget* parent = widget;
+		while (parent)
+		{
+			auto parent_parent = parent->parentWidget();
+			if (parent_parent)
+			{
+				parent = parent_parent;
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		return parent;
 	}
 
 	std::unique_ptr<QPixmap> PixmapFrom9Patch(const QPixmap& pixSrc, int horzCorner, int vertCorner, int widthDst, int heightDst)

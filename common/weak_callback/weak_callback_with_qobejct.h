@@ -28,18 +28,18 @@
 * step 3 -- use:
 * auto weak = weak_callback_.WeakPtr();
 * someObject->RegisterCallback(weak_callback_.ToWeakCallback([=](...){
-* weak.lock()->EmitClosureToContext([=]{
+* weak.lock()->EmitClosureToHostThread([=]{
 *	// do something in the thread of MyClass's host.
 *	});
 * }));
-* 
+*
 * explanation:
 * auto weak = weak_callback_.WeakPtr();
 * someObject->RegisterCallback(weak_callback_.ToWeakCallback([=](...){ // here must capture the weak variable by value[=]or[weak] NOT by reference[&]or[&weak]
 * // maybe called in a thread not same as MyClass's host.
 * // weak.lock() definitely is a valid shared_ptr since the callback has been called and performed here.
 * // emit a closure which will be called in the thread of MyClass's host.
-* weak.lock()->EmitClosureToContext([=]{
+* weak.lock()->EmitClosureToHostThread([=]{
 *	// do something in the thread of MyClass's host.
 *	});
 * }));
@@ -78,19 +78,19 @@ namespace wcb
 		Q_OBJECT
 
 	public:
-		QObjectSupportWeakCallback(QObject* context)
+		QObjectSupportWeakCallback(QObject* host)
 		{
 			qRegisterMetaType<StdClosure>("StdClosure");
 
 			//connect to a functor, with a "context" object defining in which event loop is going to be executed
-			connect(this, &QObjectSupportWeakCallback::Closure, context, [](const StdClosure& closure){ if (closure) { closure(); } });
+			QObject::connect(this, &QObjectSupportWeakCallback::Closure, host, [](const StdClosure& closure){ if (closure) { closure(); } });
 		}
 
-		QObjectSupportWeakCallback() 
-			: QObjectSupportWeakCallback(this) 
+		QObjectSupportWeakCallback()
+			: QObjectSupportWeakCallback(this)
 		{}
 
-		inline void			EmitClosureToContext(const StdClosure& closure) { emit this->Closure(closure); }
+		inline void	EmitClosureToHostThread(const StdClosure& closure) { emit this->Closure(closure); }
 
 	private:
 		// it is safe that the parameter type of Closure signal is a reference -- const StdClosure&,
